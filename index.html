@@ -33,7 +33,7 @@
                         <div class="col-lg-2">
                             <div class="brand">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="Logo">
+                                    <img src="img/corniche.png" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -66,10 +66,10 @@
                                         <a href="index.html" class="nav-item nav-link active">Home</a>
                                         <a href="about.html" class="nav-item nav-link">About Us</a>
                                         <a href="services.html" class="nav-item nav-link">Services</a>
-                                        <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
-                                        <a href="single.html" class="nav-item nav-link">Single Page</a>
+                                        <!-- <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                                        <a href="single.html" class="nav-item nav-link">Single Page</a> -->
                                         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                                        <a href="https://htmlcodex.com/bootstrap-agency-template" class="btn"><i class="fa fa-download"></i>Download Now</a>
+                                        <!-- <a href="https://htmlcodex.com/bootstrap-agency-template" class="btn"><i class="fa fa-download"></i>Download Now</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -79,19 +79,144 @@
             </div>
             <!-- Header End -->
 
+<!-- carosol start  -->
+<!-- <div  class="carousel-container">
+<div class="carousel">
+    <div class="slides">
+      <img src="img/portfolio-1.jpg" alt="slide image" class="slide">
+      <img src="img/portfolio-2.jpg" alt="slide image" class="slide">
+      <img src="img/portfolio-3.jpg" alt="slide image" class="slide">
+    </div>
+    <div class="controls">
+      <div class="control prev-slide">&#9668;</div>
+      <div class="control next-slide">&#9658;</div>
+    </div>
+  </div>
+</div> -->
+  <style>
+    /* $carousel-height: 250px;
+$control-size: 50px; */
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.carousel-container{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.carousel {
+    
+  width: 80vw;
+  height: 30rem;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+  &:hover .controls {
+    opacity: 1;
+  }
+
+  .controls {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 99999;
+    transition: all ease 0.5s;
+
+    .control {
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.7);
+      opacity: 0.5;
+      transition: ease 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slides {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    width: 100%;
+    transition: 1s ease-in-out all;
+
+    .slide {
+      min-width: 100%;
+      min-height: auto;
+      height: auto;
+    }
+  }
+}
+
+  </style>
+<script>
+  const delay = 3000; //ms
+
+const slides = document.querySelector(".slides");
+const slidesCount = slides.childElementCount;
+const maxLeft = (slidesCount - 1) * 100 * -1;
+
+let current = 0;
+
+function changeSlide(next = true) {
+  if (next) {
+    current += current > maxLeft ? -100 : current * -1;
+  } else {
+    current = current < 0 ? current + 100 : maxLeft;
+  }
+
+  slides.style.left = current + "%";
+}
+
+let autoChange = setInterval(changeSlide, delay);
+const restart = function() {
+  clearInterval(autoChange);
+  autoChange = setInterval(changeSlide, delay);
+};
+
+// Controls
+document.querySelector(".next-slide").addEventListener("click", function() {
+  changeSlide();
+  restart();
+});
+
+document.querySelector(".prev-slide").addEventListener("click", function() {
+  changeSlide(false);
+  restart();
+});
+</script>
 
             <!-- Hero Start -->
             <div class="hero">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <h2>Creative & Responsive</h2>
-                            <h2><span>HTML5</span> Template</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare</p>
-                            <a class="btn" href="https://htmlcodex.com/bootstrap-agency-template">Download Now</a>
+                            <h2>Corniche Infra Pvt. Ltd. </h2>
+                            <h2><span>Building Tomorrow, </span>  Today with Excellence & Innovation </h2>
+                            <p>Corniche Infra Pvt. Ltd. is a trusted name in the infrastructure industry, offering comprehensive turnkey solutions with end-to-end project management across diverse sectors. Headquartered in Bangalore, the company blends technical expertise, cutting-edge technology, and sustainable practices </p>
+                            <!-- <a class="btn" href="https://htmlcodex.com/bootstrap-agency-template">Download Now</a> -->
                         </div>
                         <div class="col-md-6">
-                            <img src="img/hero.png" alt="Image">
+                            <img src="img/mainpage.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -140,13 +265,15 @@
                         </div>
                         <div class="col-md-6">
                             <h2 class="section-title">Learn About Us</h2>
+                            <h2>At Corniche Infra Pvt. Ltd.</h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                we are dedicated to building the future with innovation, sustainability, and precision. As a leading infrastructure development company, we cater to a diverse range of industries, offering customized solutions that align with their specific needs. Our expertise spans across manufacturing, energy, pharmaceuticals, construction, hospitality, and commercial spaces, ensuring that each project reflects excellence in design, efficiency, and sustainability.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                With a commitment to quality, innovation, and sustainability, Corniche Infra Pvt. Ltd. transforms visions into reality, shaping industries and communities with infrastructure that stands the test of time.
+
                             </p>
-                            <a class="btn" href="">Learn More</a>
+                            <a class="btn" href="about.html">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -159,61 +286,61 @@
                 <div class="container-fluid">
                     <div class="section-header">
                         <h2>Our Services</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium ornare velit non</p>
+                        <p>At Corniche Infra Pvt. Ltd., we offer a full spectrum of services under one roof, ensuring seamless project execution and unmatched quality: </p>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>Web Design</h3>
+                                <h3>Turnkey Construction</h3>
                                 <img src="img/icon-service-1.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>Development</h3>
+                                <h3>Architecture & Interior Design</h3>
                                 <img src="img/icon-service-2.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>UI Design</h3>
+                                <h3>Civil Construction Works</h3>
                                 <img src="img/icon-service-3.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>Programming</h3>
+                                <h3>Electrical & Plumbing Services</h3>
                                 <img src="img/icon-service-4.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>Graphic Design</h3>
+                                <h3>POP Ceiling Work & Kitchen Design </h3>
                                 <img src="img/icon-service-5.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>Video Editing</h3>
+                                <h3>IT & Home Automation Systems </h3>
                                 <img src="img/icon-service-6.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>SEO</h3>
+                                <h3>Lift Installation & HVAC Systems </h3>
                                 <img src="img/icon-service-7.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-item">
-                                <h3>Online Marketing</h3>
+                                <h3>Networking & CCTV Solutions </h3>
                                 <img src="img/icon-service-8.png" alt="Service">
                                 <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
                             </div>

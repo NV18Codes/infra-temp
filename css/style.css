@@ -1836,6 +1836,41 @@ a:focus {
     width: 20px;
 }
 
+.footer .social-icons a {
+    font-size: 15px;
+    /* Increased icon size */
+    margin: 0 8px;
+    /* Space between icons */
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    /* Default Icon color */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition */
+    border: 2px solid #333;
+    /* Circle Border */
+    border-radius: 50%;
+    /* Circle shape */
+    width: 40px;
+    /* Circle width */
+    height: 40px;
+    /* Circle height */
+    text-align: center;
+    line-height: 40px;
+    /* Vertically align icons */
+}
+
+.social-icons a:hover {
+    background: #4CAF50;
+    /* Green background on hover */
+    color: #fff;
+    /* White icon color */
+    border-color: #4CAF50;
+    /* Green border on hover */
+}
+
+
+
 .footer .footer-link a {
     display: block;
     margin-bottom: 10px;
@@ -1864,7 +1899,7 @@ a:focus {
 .footer .copyright p {
     margin: 0;
     font-size: 14px;
-    color: #999999;
+    color: #121212;
 }
 
 .footer .copyright .col-md-6:last-child p {
@@ -1872,7 +1907,7 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #999999;
+    color: #101010;
 }
 
 .footer .copyright p a:hover {
